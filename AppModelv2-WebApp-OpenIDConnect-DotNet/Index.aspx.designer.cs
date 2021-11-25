@@ -13,15 +13,6 @@ namespace AppModelv2_WebApp_OpenIDConnect_DotNet {
     public partial class Index {
         
         /// <summary>
-        /// form control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form;
-        
-        /// <summary>
         /// SignIn control.
         /// </summary>
         /// <remarks>
@@ -31,24 +22,6 @@ namespace AppModelv2_WebApp_OpenIDConnect_DotNet {
         protected global::System.Web.UI.WebControls.Button SignIn;
         
         /// <summary>
-        /// Upload1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Upload1;
-        
-        /// <summary>
-        /// Upload2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Upload2;
-        
-        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -56,14 +29,5 @@ namespace AppModelv2_WebApp_OpenIDConnect_DotNet {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
-        /// FileUpload1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
     }
 }

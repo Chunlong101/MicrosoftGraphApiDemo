@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MaintainScrollPositionOnPostback="true" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="AppModelv2_WebApp_OpenIDConnect_DotNet.Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="AppModelv2_WebApp_OpenIDConnect_DotNet.Index" %>
 
 <!DOCTYPE html>
 <html>
@@ -6,8 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <link rel="shortcut icon" href="assets/images/mbr-196x196.png" type="image/x-icon">
-    <meta name="description" content="">
+    <meta name="description" content="Microsoft Graph Api Demo Site">
     <title>Home</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
@@ -23,19 +22,30 @@
     </noscript>
     <link rel="preload" as="style" href="assets/mb/css/mbr-additional.css">
     <link rel="stylesheet" href="assets/mb/css/mbr-additional.css" type="text/css">
+    <style type="text/css">
+        .center-in-center {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 <body>
-    <form runat="server" id="form">
+    <form runat="server">
+        <%--Menu Bar--%>
         <section data-bs-version="5.1" class="menu menu2 cid-sOVTQ46G4z" once="menu" id="menu2-0">
             <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
                 <div class="container">
                     <div class="navbar-brand">
                         <span class="navbar-logo">
-                            <a href="">
-                                <img src="assets/images/mbr-196x196.png" style="height: 3rem;">
-                            </a>
+                            <img src="assets/images/mbr-196x196.png" style="height: 3rem;">
                         </span>
-                        <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-7" href="https://mobiri.se">Microsoft Graph Api Demo Site</a></span>
+                        <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-7">Microsoft Graph Api Demo Site</a></span>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <div class="hamburger">
@@ -55,6 +65,7 @@
                 </div>
             </nav>
         </section>
+        <%--Purpose--%>
         <section data-bs-version="5.1" class="header18 cid-sPBCvSTRPx mbr-fullscreen" id="header18-a">
             <div class="align-center container">
                 <div class="row justify-content-center">
@@ -63,114 +74,21 @@
                         <p class="mbr-text mbr-fonts-style mbr-white display-7">
                             This demo site aims at demonstrating how graph api works with different access token
                         </p>
-                        <div class="mbr-section-btn mt-3"><a class="btn btn-primary display-4" href="index.aspx#header2-f">Get Started!</a></div>
+                        <div class="mbr-section-btn mt-3"><a class="btn btn-primary display-4" href="Upload.aspx">Get Started!</a></div>
+                        <asp:Label ID="Label1" runat="server" class="mbr-text mbr-fonts-style display-7 text-danger"></asp:Label>
                     </div>
                 </div>
             </div>
         </section>
-        <section data-bs-version="5.1" class="header2 cid-sPBGRU4P18 mbr-fullscreen mbr-parallax-background" id="header2-f">
-            <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(255, 255, 255);"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-7">
-                        <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1"><strong>Upload a file</strong></h1>
-                        <p class="mbr-text mbr-fonts-style display-7">There're two buttons below using <a href="https://docs.microsoft.com/en-us/graph/api/driveitem-put-content?view=graph-rest-1.0&tabs=http#http-request-to-upload-a-new-file" class="text-primary">the same graph api</a>&nbsp;to upload a file (under 4MB), pls try and see the difference.&nbsp;</p>
-                        <div class="mbr-section-btn mt-3">
-                            <asp:Button ID="Upload1" runat="server" Text="Button 1" OnClick="Upload1_Click" class="btn btn-success display-4" />
-                            <span></span>
-                            <asp:Button ID="Upload2" runat="server" Text="Button 2" OnClick="Upload2_Click" class="btn btn-secondary display-4" />
-                            <p></p>
-                            <asp:Label ID="Label1" runat="server" class="mbr-text mbr-fonts-style display-7 text-danger"></asp:Label>
-                            <p></p>
-                            <asp:FileUpload ID="FileUpload1" runat="server" class="btn" Style="padding-left: 0px;" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section data-bs-version="5.1" class="content6 cid-sPBq3Ewd0Y" id="content6-7">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-12 col-lg-10">
-                        <hr class="line">
-                        <p class="mbr-text align-center mbr-fonts-style my-4 display-5">
-                            What's the difference?
-                        </p>
-                        <hr class="line">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section data-bs-version="5.1" class="image1 cid-sPBqdKpPjl" id="image1-8">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-12 col-lg-6">
-                        <div class="image-wrapper">
-                            <img src="assets/images/authorization-code-flow.svg">
-                            <p class="mbr-description mbr-fonts-style pt-2 align-center display-4">Authorization Code Flow</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg">
-                        <div class="text-wrapper">
-                            <h3 class="mbr-section-title mbr-fonts-style mb-3 display-5"><strong>Authorization Code Flow</strong></h3>
-                            <p class="mbr-text mbr-fonts-style display-7">
-                                Authorization code flow provides permissions for your application to manipulate documents and other resources on behalf of a user and make requests for all API resources. Access tokens while having a limited lifetime, can be renewed with a refresh token. A refresh token is valid indefinitely and provides ability for your application to schedule tasks on behalf of a user without their interaction.<br>
-                                <br>
-                                <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow" class="text-primary">https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow</a><br>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section data-bs-version="5.1" class="image2 cid-sPBqeo7RBv" id="image2-9">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-12 col-lg-6">
-                        <div class="image-wrapper">
-                            <img src="assets/images/client-credentials-flow.svg">
-                            <p class="mbr-description mbr-fonts-style mt-2 align-center display-4">
-                                Client Credentials Flow&nbsp;<br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg">
-                        <div class="text-wrapper">
-                            <h3 class="mbr-section-title mbr-fonts-style mb-3 display-5"><strong>Client Credentials Flow</strong></h3>
-                            <p class="mbr-text mbr-fonts-style display-7">
-                                The OAuth 2.0 client credentials grant flow permits a web service (confidential client) to use its own credentials, instead of impersonating a user, to authenticate when calling another web service. For a higher level of assurance, the Microsoft identity platform also allows the calling service to authenticate using a certificate or federated credential instead of a shared secret. Because the applications own credentials are being used, these credentials must be kept safe - never publish that credential in your source code, embed it in web pages, or use it in a widely distributed native application.
-                            <br>
-                                <br>
-                                In the client credentials flow, permissions are granted directly to the application itself by an administrator. When the app presents a token to a resource, the resource enforces that the app itself has authorization to perform an action since there is no user involved in the authentication.&nbsp;<br>
-                                <br>
-                                <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow" class="text-primary">https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow</a><br>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section data-bs-version="5.1" class="footer7 cid-sOVWvzIA1U" once="footers" id="footer7-2">
-            <div class="container">
-                <div class="media-container-row align-center mbr-white">
-                    <div class="col-12">
-                        <p class="mbr-text mb-0 mbr-fonts-style display-7">Microsoft CSS SharePoint Support Team</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color: #aaa; font-size: 12px; padding: 0; align-items: center; display: flex;">
-            <%--这一句不能改，改了就有问题。--%>
-            <p style="flex: 0 0 auto; margin: 0; padding-right: 1rem;">Create a free site - <a href="https://mobirise.site/w" style="color: #aaa;">Try it</a></p>
-        </section>
-        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/parallax/jarallax.js"></script>
-        <script src="assets/smoothscroll/smooth-scroll.js"></script>
-        <script src="assets/ytplayer/index.js"></script>
-        <script src="assets/dropdown/js/navbar-dropdown.js"></script>
-        <script src="assets/theme/js/script.js"></script>
-        <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
-        <input name="animation" type="hidden">
     </form>
+    <a href="https://mobirise.site/w" style="display: none"></a>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/parallax/jarallax.js"></script>
+    <script src="assets/smoothscroll/smooth-scroll.js"></script>
+    <script src="assets/ytplayer/index.js"></script>
+    <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+    <script src="assets/theme/js/script.js"></script>
+    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
+    <input name="animation" type="hidden">
 </body>
 </html>
