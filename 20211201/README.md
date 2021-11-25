@@ -4,9 +4,9 @@ This repository has the source code of a demo website (screenshots below) that s
 
 ![image](https://user-images.githubusercontent.com/9314578/143471433-768b8070-47fc-448e-9cdf-a8ffd09c2972.png)
 
-Pls feel free to visit https://graphapidemosite.azurewebsites.net for more details, this demo is hosted there, the test account is test@chunlong.onmicrosoft.com/2021Password1126 
+Pls feel free to visit https://graphapidemosite.azurewebsites.net for more details, this demo website is hosted there, the test account is test@chunlong.onmicrosoft.com/2021Password1126 
 
-The following steps are something similar with powershell (in "PowerShell Demo.docx"): 
+The following details are for the demo of powershell to user graph api (in "PowerShell Demo.docx"): 
 
 ![image](https://user-images.githubusercontent.com/9314578/143477034-7ff31d35-ef2a-44a7-9c32-fe690ba63c4c.png)
 
