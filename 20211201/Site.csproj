@@ -252,6 +252,7 @@
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="PowerShell Demo.ps1" />
     <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <None Include="Properties\PublishProfiles\GraphApiDemoSite - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\GraphApiDemoSite - ReadOnly - FTP.pubxml" />
