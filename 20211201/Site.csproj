@@ -249,6 +249,7 @@
     <Content Include="assets\socicon\fonts\socicon.ttf" />
     <Content Include="assets\socicon\fonts\socicon.woff" />
     <Content Include="assets\socicon\fonts\socicon.woff2" />
+    <Content Include="Microsoft Graph Api Training 20211201.docx" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
