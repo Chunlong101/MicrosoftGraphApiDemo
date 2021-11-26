@@ -1,4 +1,4 @@
-Pls feel free to visit https://graphapidemosite.azurewebsites.net for more details, this demo website is hosted there, the test account is test@chunlong.onmicrosoft.com/2021Password1201 
+Pls feel free to visit https://graphapidemosite.azurewebsites.net, this demo website is hosted there, the test account is test@chunlong.onmicrosoft.com/2021Password1201 
 
 This repository has the source code of a demo website (screenshots below) that shows how Microsoft Graph Api works with OAuth 2.0: 
 
