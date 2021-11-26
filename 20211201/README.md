@@ -1,10 +1,10 @@
+Pls feel free to visit https://graphapidemosite.azurewebsites.net for more details, this demo website is hosted there, the test account is test@chunlong.onmicrosoft.com/2021Password1201 
+
 This repository has the source code of a demo website (screenshots below) that shows how Microsoft Graph Api works with OAuth 2.0: 
 
 ![image](https://user-images.githubusercontent.com/9314578/143471539-d08da3ce-6b23-457a-b04a-27480d47800f.png)
 
 ![image](https://user-images.githubusercontent.com/9314578/143471433-768b8070-47fc-448e-9cdf-a8ffd09c2972.png)
-
-Pls feel free to visit https://graphapidemosite.azurewebsites.net for more details, this demo website is hosted there, the test account is test@chunlong.onmicrosoft.com/2021Password1126 
 
 The following details are for the demo of powershell to user graph api (in "PowerShell Demo.docx"): 
 
