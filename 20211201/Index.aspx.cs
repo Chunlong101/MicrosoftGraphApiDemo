@@ -19,9 +19,7 @@ namespace AppModelv2_WebApp_OpenIDConnect_DotNet
             //    Response.Redirect("~/Home/SignIn");
             //}
             //else
-            //{
-            //    currentUser = HttpContext.Current.User;
-            //}
+            //{}
 
             try
             {
